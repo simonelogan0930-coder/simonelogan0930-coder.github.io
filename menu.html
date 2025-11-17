@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: url('people.png') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner-quote {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 42px;
+            color: white;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            width: 600px;
+            height: 450px;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            animation: slideAnimation 21s infinite;
+        }
+
+        .slideshow-container img:nth-child(1) { animation-delay: 0s; }
+        .slideshow-container img:nth-child(2) { animation-delay: 3s; }
+        .slideshow-container img:nth-child(3) { animation-delay: 6s; }
+        .slideshow-container img:nth-child(4) { animation-delay: 9s; }
+        .slideshow-container img:nth-child(5) { animation-delay: 12s; }
+        .slideshow-container img:nth-child(6) { animation-delay: 15s; }
+        .slideshow-container img:nth-child(7) { animation-delay: 18s; }
+
+        @keyframes slideAnimation {
+            0% { opacity: 0; }
+            5% { opacity: 1; }
+            20% { opacity: 1; }
+            25% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        @media (max-width: 700px) {
+            .slideshow-container {
+                width: 90%;
+                height: auto;
+            }
+            .slideshow-container img {
+                height: auto;
+            }
+        }
+
+        
+        .btn {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background: #ffb85c;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Zoom menu */
+        .zoom-menu {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .zoom-menu img {
+            max-width: 600px;
+            width: 80%;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .zoom-menu img:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" class="logo">
+
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle">☰</label>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="banner">
+    <div class="banner-quote">“Good mornings begin here”</div>
+</div>
+
+
+<center>
+    <a href="reservation.html" class="btn">Join the Waitlist</a>
+</center>
+
+
+<h2 style="text-align:center;">Our Drinks</h2>
+<div class="slideshow-container">
+    <img src="matcha.png" alt="Matcha">
+    <img src="juice.png" alt="Juice">
+    <img src="tea.png" alt="Tea">
+    <img src="apple.png" alt="Apple">
+    <img src="mango.png" alt="Mango">
+    <img src="mimosa.png" alt="Mimosa">
+    <img src="latte.png" alt="Latte">
+</div>
+
+
+<h2 style="text-align:center; margin-top:40px;">Full Menu</h2>
+<div class="zoom-menu">
+    <a href="menu.png" target="_blank">
+        <img src="menu.png" alt="Full Menu">
+    </a>
+</div>
+
+</body>
+</html>

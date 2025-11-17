@@ -1,0 +1,349 @@
+
+body {
+    margin: 0;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+header {
+    background: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+/* Circular Logo */
+.logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+nav input[type=checkbox] {
+    display: none;
+}
+
+nav label {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+@media(max-width: 800px) {
+    nav label {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: white;
+        padding: 20px;
+        position: absolute;
+        right: 20px;
+        top: 100px;
+        border: 1px solid #ccc;
+    }
+    nav input[type=checkbox]:checked ~ ul {
+        display: flex;
+    }
+}
+
+/* home css */
+.home-grid {
+    padding: 40px;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+.home-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.home-card img {
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+/* The overlay appears ONLY when hovered */
+.home-card:hover img {
+    filter: brightness(40%);
+}
+
+.home-overlay {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.home-card:hover .home-overlay {
+    bottom: 30px;
+    opacity: 1;
+}
+
+/* our story css */
+
+.parallax-banner {
+    display: flex;
+    min-height: 350px;
+}
+
+.parallax-left {
+    width: 50%;
+    background-image: url("story-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* CSS-only parallax */
+}
+
+.parallax-right {
+    width: 50%;
+    padding: 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+/* menu css */
+details {
+    width: 80%;
+    margin: 15px auto;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* reservation css */
+.floating-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.floating-group input,
+.floating-group textarea,
+.floating-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.floating-group label {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    transition: 0.3s;
+    background: white;
+    padding: 0 5px;
+    pointer-events: none;
+}
+
+.floating-group input:focus + label,
+.floating-group input:not(:placeholder-shown) + label,
+.floating-group textarea:focus + label,
+.floating-group textarea:not(:placeholder-shown) + label,
+.floating-group select:focus + label {
+    top: -10px;
+    font-size: 0.8rem;
+}
+
+/* Form Container */
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    background: white;
+}
+
+/* Buttons */
+.btn {
+    background: black;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* contact us css */
+
+.flip-grid {
+    display: grid;
+    padding: 40px;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-inner {
+    width: 100%;
+    height: 320px;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+}
+
+.flip-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.flip-back {
+    background: #333;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* review page css */
+
+/* Speech bubble style reviews */
+.review-bubble {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    position: relative;
+    border-left: 5px solid black;
+}
+
+.review-bubble:after {
+    content:"";
+    position:absolute;
+    left:20px;
+    bottom:-15px;
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: white transparent;
+}
+
+/* Punch card rating */
+.punch-card {
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    margin:30px 0;
+}
+
+.punch-box {
+    width:40px;
+    height:40px;
+    border:2px solid black;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.punch-box:hover {
+    background:black;
+}
+
+/* gallery css */
+
+.gallery-grid {
+    display: grid;
+    gap: 25px;
+    padding: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* Lightbox */
+.lightbox {
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.lightbox:target {
+    display:flex;
+}
+
+.lightbox-content {
+    max-width:600px;
+    background:#333;
+    padding:20px;
+    color:white;
+    border-radius:12px;
+}
+
+.close {
+    color:white;
+    text-decoration:none;
+    font-size:2rem;
+    float:right;
+}

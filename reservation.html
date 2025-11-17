@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+       
+        .top-banner {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: url("people2.png") center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-quote {
+            font-family: "Brush Script MT", cursive;
+            font-size: 42px;
+            color: white;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .banner-quote {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="top-banner">
+    <div class="banner-quote">
+        “Reserve your moment — great mornings start with great company.”
+    </div>
+</div>
+
+<header>
+    <img src="logo.png" class="logo">
+
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle">☰</label>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h1 style="text-align:center;">Make a Reservation</h1>
+
+<form>
+
+
+    <div class="floating-group">
+        <input type="text" placeholder=" " required>
+        <label>Name</label>
+    </div>
+
+    <div class="floating-group">
+        <input type="email" placeholder=" " required>
+        <label>Email</label>
+    </div>
+
+    <div class="floating-group">
+        <input type="text" placeholder=" " required>
+        <label>Phone Number</label>
+    </div>
+
+    <div class="floating-group">
+        <select required>
+            <option value=""></option>
+            <option>1 Person</option>
+            <option>2 People</option>
+            <option>3 People</option>
+            <option>4 People</option>
+            <option>5 People</option>
+            <option>6+</option>
+        </select>
+        <label>Party Size</label>
+    </div>
+
+    <div class="floating-group">
+        <input type="date" placeholder=" " required>
+        <label>Date</label>
+    </div>
+
+    <div class="floating-group">
+        <input type="time" placeholder=" " required>
+        <label>Time</label>
+    </div>
+
+    <center>
+        <button class="btn" type="submit">Reserve</button>
+    </center>
+
+</form>
+
+</body>
+</html>

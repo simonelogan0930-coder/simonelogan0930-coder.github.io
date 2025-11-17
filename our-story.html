@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .photo-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .photo-row img {
+            width: 45%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            object-fit: cover;
+            animation: slideIn 0.9s ease forwards;
+        }
+
+        
+        .photo-row img:nth-child(1) { animation-delay: 0.1s; }
+        .photo-row img:nth-child(2) { animation-delay: 0.3s; }
+
+        @media (max-width: 700px) {
+            .photo-row img {
+                width: 80%;
+            }
+            .photo-row {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #333;
+        }
+    </style>
+    <style>
+     
+        .top-banner {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: url("ban.png") center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-quote {
+            font-family: "Brush Script MT", cursive;
+            font-size: 42px;
+            color: white;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .banner-quote {
+                font-size: 30px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div class="top-banner">
+    <div class="banner-quote">
+        “How it all Began - Great People and a Better Idea.”
+    </div>
+</div>
+<header>
+    <img src="logo.png" class="logo">
+
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+<a href="reservation.html">Reservations</a>
+        <a href="contact.html">Contact</a>
+<a href="gallery.html">Gallery</a>
+    </nav>
+</header>
+
+
+<div class="photo-row">
+    <img src="building1.png" alt="Building 1">
+    <img src="building2.png" alt="Building 2">
+</div>
+
+<h1 style="text-align:center;">Our Story</h1>
+
+<section class="parallax-banner">
+    <div class="parallax-left"></div>
+
+    <div class="parallax-right">
+        Rise & Dine began with a passion for slow mornings,
+        handcrafted meals, and community. Our journey is built on
+        warmth, tradition, and great breakfast.
+    </div>
+</section>
+
+<section style="padding:30px;"> 
+
+<p> Founded on October 27th, 2025, in Houston, Texas, Rise and Dine began as a small dream shared by seven college students: DeCaden Kelley, Talha Khalid, Simone Logan, Zakavion Shepard, Ahman Williams-Higgins, Oslynn Williams, and Todd Woods. They believed brunch could be something special. What started as a simple class project soon grew into a vision for a space where people could relax, recharge, and connect over fresh, delicious food. </p> 
+
+Balancing schoolwork and business plans wasn’t easy. We spent late nights perfecting recipes, learning the ins and outs of running a kitchen, and saving every dollar we could to bring our idea to life. But through dedication, teamwork, and a shared love for breakfast, Rise and Dine finally opened its doors, and the response from our community made every challenge worth it. </p> 
+
+Today, Rise and Dine is known for serving quality food made with care. Every dish is crafted fresh, from our fluffy pancakes and golden toast to our savory omelets, fruit bowls, breakfast plates, and freshly brewed coffee. We use high-quality ingredients and cook with heart, creating meals that taste homemade because they are. </p> 
+
+At Rise and Dine, we don’t just serve breakfast. We serve comfort, creativity, and connection. Whether you’re a student grabbing a quick bite before class, a family enjoying weekend brunch, or a local stopping by for your morning coffee, you’re part of the story we continue to write every day. </p> 
+
+Rise and Dine — where every day starts with flavor, passion, and a reason to smile. 
+</p> </section>
+
+
+<div class="photo-row">
+    <img src="pic1.png" alt="Photo 1">
+    <img src="pic2.png" alt="Photo 2">
+</div>
+
+</body>
+</html>
